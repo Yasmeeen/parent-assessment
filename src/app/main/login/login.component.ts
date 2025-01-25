@@ -61,8 +61,7 @@ export class LoginComponent {
         this.router.navigate(['/main']); // Navigate to dashboard or protected route
       },
       (error) => {
-        // Handle login error
-        console.error('Login error:', error);
+
       }
     );
   }
