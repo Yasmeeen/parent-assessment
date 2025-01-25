@@ -1,8 +1,16 @@
-.nav-link {
-  padding: 10px 20px;
-  color: #333;
-}
-.nav-link:hover {
-  background-color: #f8f9fa;
-  color: #0056b3;
+@use 'variables/variables.scss' as *;
+.sidebar {
+  margin: 20px;
+  border-radius: 18px;
+  box-shadow: 0 2px 6px rgba(37, 83, 185, 0.1);
+  background: $white;
+  width: 280px;
+  .nav-link {
+    padding: 10px 20px;
+    color: #333;
+  }
+  .nav-link:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+  }
 }

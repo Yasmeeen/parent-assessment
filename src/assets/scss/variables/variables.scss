@@ -1,0 +1,116 @@
+$LtrFontFamily: "Montserrat", sans-serif, "Aegyptus";
+$RtlFontFamily: "Tajawal", sans-serif, "Aegyptus";
+
+$white: #fff;
+$black: #000;
+$overlay: rgba(0, 0, 0, 0.85);
+
+$ghost-white: #f8f9fc;
+
+$primary: #2977ff;
+$primary-light: #f5f9ff;
+$primary-20: #f6f9ff;
+$primary-50: #e5efff;
+$primary-100: #ccdfff;
+$primary-200: #99bffe;
+$primary-300: #75a8ff;
+$primary-500: #0a66ff;
+$primary-600: #0058eb;
+$primary-700: #004ccc;
+$primary-800: #003da3;
+$primary-hover: #165fde;
+$primary-focus: #0e47ac;
+
+$n-20: #fbfbfb;
+$n-50: #f1f2f4;
+$n-100: #e1e5e9;
+$n-200: #c0c6d2;
+$n-300: #a0aabb;
+$n-500: #75849b;
+$n-800: #465061;
+$n-900: #14161b;
+
+$blue-50: #e5f5fb;
+$blue-600: #00a4db;
+$blue-900: #1357cb;
+
+$success-20: #f3fff8;
+$success-50: #eaf9ef;
+$success-100: #7cb258;
+$success-200: #b5dfc5;
+$success-focus: #1b8d45;
+$success-hover: #34a85f;
+$success: #46b770;
+
+$warning-50: #fff7eb;
+$warning: #ff9000;
+$warning-600: #ff5500;
+
+$danger-20: #eccec9;
+$danger-50: #fff5f5;
+$danger-100: #fee1e1;
+$danger: #bf5c4d;
+$danger-hover: #ad4c3d;
+$danger-focus: #a63c2c;
+
+$indigo: #9000ff;
+$indigo-50: #fbf5ff;
+
+$greenish-white: #f0f9ea;
+
+$background-colors-list:#D251D8 #00B0FF #F47A00 #43B791 #B74365 #74BB1B #B1A930 #A330B1 #55C0C1 #233CB9
+#FF4288 #88B6E6 #8DC7A1 #C38F78 #D272FF #0099FF #D6AF70 #EC4442 #00C8D7 #B7BC49;
+
+$bg-main: #f0f5f9;
+
+$border: 1px solid $n-100;
+$border-100-2: 2px solid $n-100;
+$border-50: 1px solid $n-50;
+$border-top-50: 1px solid $n-50;
+$border-200: 1px solid $n-200;
+$border-selected: 2px solid $primary;
+$border-3-n-50: 3px solid $n-50;
+$border-7-white: 7px solid $white;
+
+$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-50: 0 0 4px 0 $shadow-color;
+$shadow: 0 2px 4px 0 $shadow-color;
+$shadow-600: 0 2px 8px 0 $shadow-color;
+
+$shadow-danger: 0 0 0 0.2rem rgba(244, 81, 108, 0.25);
+
+$rounded: 4px;
+$roundedCircle: 50%;
+
+$transition: all 0.2s ease-in-out;
+
+/* Start tremeloo color scheme */
+$light-main-color: #75a8ff;
+$main-color: #2979ff;
+$main-color-hover: #0058eb;
+$success-color: #26bd45;
+$success-color-hover: #539a05;
+$danger-color: #f4516c;
+$danger-color-hover: #ec2344;
+$orange-color: #ff8c00;
+$maroon-color: #f48fb1;
+$maroon-color-hover: #f36091;
+$yellow-color: #ffcc80;
+$yellow-color-hover: #fab753;
+$light-grey-text: #92a2c8;
+$light-grey-color: #92929d;
+$grey-color: #6c757d;
+$grey-color-hover: #404549;
+$dark-color: #2c2c2c;
+
+$light-bg: #f8f8f8;
+$light-bg-hover: #e8e8e8;
+$secondary-bg: #d8dde6;
+$light-blue-bg: #b8d4f4;
+$sky-bg: #ccdfff;
+
+$light-border: #e2e5ea;
+$grey-border: #c0c7d2;
+$semi-dark-border: #6c757d;
+$dark-border: #0000008a;
+/* End tremeloo color scheme */
