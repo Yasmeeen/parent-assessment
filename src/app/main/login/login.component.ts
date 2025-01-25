@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../../core/auth/auth.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {
     this.initLoginForm();
   }
@@ -58,9 +60,10 @@ export class LoginComponent {
         // Store the token in localStorage
         localStorage.setItem('token', response.token);
         this.router.navigate(['/main/users']); // Navigate to dashboard or protected route
+        this.toastr.success('Login successfully', 'Success');
       },
       (error) => {
-
+        this.toastr.error('Error Login Failed', 'Error');
       }
     );
   }

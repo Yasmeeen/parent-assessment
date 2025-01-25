@@ -33,8 +33,6 @@ export class UserDetailsComponent {
     this.userService.getUser(this.userId).subscribe((response: any) => {
       this.selectedUser = response.data;
       this.isLoading = false;
-      console.log("this.selectedUser ",this.selectedUser );
-
     },
     (error) => {
       this.isLoading = false;
