@@ -58,7 +58,7 @@ export class LoginComponent {
       (response) => {
         // Store the token in localStorage
         localStorage.setItem('token', response.token);
-        this.router.navigate(['/main']); // Navigate to dashboard or protected route
+        this.router.navigate(['/main/users']); // Navigate to dashboard or protected route
       },
       (error) => {
 

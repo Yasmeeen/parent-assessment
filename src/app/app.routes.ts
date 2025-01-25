@@ -20,7 +20,7 @@ export const routes: Routes = [
       // Add more routes for other standalone components
     ],
   },
-  { path: '', redirectTo: 'main', pathMatch: 'full' },
-  { path: '**', redirectTo: 'main' }, // Fallback route
+  { path: '', redirectTo: 'main/users', pathMatch: 'full' },
+  { path: '**', redirectTo: 'main/users' }, // Fallback route
 
 ];
