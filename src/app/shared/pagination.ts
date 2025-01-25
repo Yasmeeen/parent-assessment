@@ -4,11 +4,7 @@ import {
   Input,
   Output,
   EventEmitter,
-  SimpleChanges,
-  OnChanges,
-  OnInit,
 } from '@angular/core';
-import { PaginationData } from '../core/models/pagination.model';
 import { CommonModule } from '@angular/common';
 
 @Injectable()

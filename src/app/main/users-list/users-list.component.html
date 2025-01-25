@@ -14,6 +14,7 @@
         <th>Avatar</th>
         <th>Name</th>
         <th>Email</th>
+        <th> </th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,13 @@
         </td>
         <td>{{ user.first_name }} {{ user.last_name }}</td>
         <td>{{ user.email }}</td>
+        <td>
+            <!-- Edit Button -->
+        <button class="btn btn-warning btn-sm mx-2" (click)="editUser(user.id)">Edit</button>
+
+        <!-- Delete Button -->
+        <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>

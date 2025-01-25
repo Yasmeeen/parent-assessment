@@ -12,6 +12,10 @@ export class UsersService {
 
   getUsers(page: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}?page=${page}`);
+  }
 
+  // Delete user by ID
+  deleteUser(userId: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${userId}`);
   }
 }
