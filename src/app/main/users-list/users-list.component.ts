@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { CommonModule } from '@angular/common';
 import { Pagination } from '../../shared/pagination';
-import { PaginationData } from '../../core/models/pagination.model';
 import { Subscription } from 'rxjs';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @Component({
   selector: 'app-users-list',
-  imports: [CommonModule,Pagination],
+  imports: [CommonModule,Pagination,UserFormComponent],
   templateUrl: './users-list.component.html',
   styleUrl: './users-list.component.scss'
 })

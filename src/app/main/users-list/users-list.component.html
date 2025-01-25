@@ -3,7 +3,7 @@
 >
   <h3 class="d-flex justify-content-between align-items-center">
     <span class="text-primary">Users</span>
-    <button type="button" class="btn btn-primary">Create User</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userFormModal">Create User</button>
   </h3>
 
 <div *ngIf="users.length > 0">
@@ -47,3 +47,6 @@
 </div>
 
   </div>
+
+    <!-- Include the Modal Component -->
+  <app-user-form></app-user-form>
