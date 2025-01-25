@@ -1,5 +1,5 @@
 <!-- User Form Modal -->
-<div class="modal fade" id="userFormModal" tabindex="-1" aria-labelledby="userFormModalLabel" aria-hidden="true">
+<div class="modal fade" id="userFormModal" tabindex="-1" aria-labelledby="userFormModalLabel" aria-hidden="true"  #userFormModal >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,31 +8,41 @@
       </div>
       <div class="modal-body">
         <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-          <div class="mb-3">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" id="firstName" class="form-control" formControlName="firstName" required>
-            <div *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="text-danger">
-              First Name is required.
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="firstName" class="form-label text-primary">First Name</label>
+                <input type="text" id="firstName" class="form-control" formControlName="firstName" required>
+                <div *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="text-danger">
+                  First Name is required.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="lastName" class="form-label text-primary">Last Name</label>
+                <input type="text" id="lastName" class="form-control" formControlName="lastName" required>
+                <div *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched" class="text-danger">
+                  Last Name is required.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-3">
+                <label for="email" class="form-label text-primary">Email</label>
+                <input type="email" id="email" class="form-control" formControlName="email" required>
+                <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
+                  Please enter a valid email.
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="mb-3">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" id="lastName" class="form-control" formControlName="lastName" required>
-            <div *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched" class="text-danger">
-              Last Name is required.
-            </div>
-          </div>
 
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-control" formControlName="email" required>
-            <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
-              Please enter a valid email.
-            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" [disabled]="userForm.invalid">Submit</button>
           </div>
-
-          <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Submit</button>
         </form>
       </div>
     </div>
