@@ -9,6 +9,7 @@ import { routes } from './app/app.routes';
 import { AuthService } from './app/core/auth/auth.service';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 bootstrapApplication(AppComponent, {
@@ -17,6 +18,6 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
     importProvidersFrom(CommonModule), // Import CommonModule for common directives like NgIf,
     importProvidersFrom(BrowserAnimationsModule, ToastrModule.forRoot()),
-    AuthService,
+    AuthService, provideAnimationsAsync(), provideAnimationsAsync(),
   ]
 }).catch((err) => console.error(err));

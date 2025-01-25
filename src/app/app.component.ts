@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterOutlet } from '@angular/router';
-import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,ToastrModule,NgbModalModule],
+  imports: [RouterOutlet,ToastrModule, MatDialogModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

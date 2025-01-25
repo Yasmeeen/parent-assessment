@@ -1,52 +1,60 @@
-<div
-  class="shadow-sm rounded-4 bg-white p-4"
->
+<div class="shadow-sm rounded-4 bg-white p-4">
   <h3 class="d-flex justify-content-between align-items-center">
     <span class="text-primary">Users List</span>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userFormModal">Create User</button>
+    <button type="button" class="btn btn-primary" (click)="openUserFormModal()">
+      Create User
+    </button>
   </h3>
 
-<div *ngIf="users.length > 0">
-  <table class="table table-striped mt-4">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Avatar</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th> </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td>{{ user.id }}</td>
-        <td>
-          <img [src]="user.avatar" alt="{{ user.first_name }}" class="rounded-circle" width="50" height="50">
-        </td>
-        <td>{{ user.first_name }} {{ user.last_name }}</td>
-        <td>{{ user.email }}</td>
-        <td>
+  <div *ngIf="users.length > 0">
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Avatar</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>
+            <img
+              [src]="user.avatar"
+              alt="{{ user.first_name }}"
+              class="rounded-circle"
+              width="50"
+              height="50"
+            />
+          </td>
+          <td>{{ user.first_name }} {{ user.last_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>
             <!-- Edit Button -->
-        <button class="btn btn-warning btn-sm mx-2" (click)="editUser(user.id)">Edit</button>
+            <button
+              class="btn btn-warning btn-sm mx-2"
+              (click)="openUserFormModal(user.id)"
+            >
+              Edit
+            </button>
 
-        <!-- Delete Button -->
-        <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            <!-- Delete Button -->
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-  <div class="plr-4 ptb-4">
-    <pagination
-      [currentPage]="currentPage"
-      [totalPages]="totalPages"
-      (paginationUpdate)="paginationUpdate($event)"
-    ></pagination>
+    <div class="plr-4 ptb-4">
+      <pagination
+        [currentPage]="currentPage"
+        [totalPages]="totalPages"
+        (paginationUpdate)="paginationUpdate($event)"
+      ></pagination>
+    </div>
   </div>
-
 </div>
-
-  </div>
-
-    <!-- Include the Modal Component -->
-  <app-user-form></app-user-form>

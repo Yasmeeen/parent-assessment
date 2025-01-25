@@ -3,6 +3,7 @@ import { LoginComponent } from './main/login/login.component';
 import { MainComponent } from './main/main.component';
 import { UsersListComponent } from './main/users-list/users-list.component';
 import { AuthGuard } from './core/auth/guards/authentication.guard';
+import { UserFormComponent } from './main/users-list/user-form/user-form.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },

@@ -14,13 +14,19 @@ export class UsersService {
     return this.http.get<any>(`${this.apiUrl}?page=${page}`);
   }
 
-  // Delete user by ID
   deleteUser(userId: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${userId}`);
   }
 
-  // Function to create a user
   createUser(userData: any): Observable<any> {
     return this.http.post(this.apiUrl, userData);
+  }
+
+  getUser(userId: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${userId}`);
+  }
+
+  updateUser(userId:number,params: number): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${userId}`, params);
   }
 }
