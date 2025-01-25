@@ -39,6 +39,12 @@
             >
               Edit
             </button>
+            <button
+            class="btn btn-info btn-sm mx-2"
+            (click)="openUserDetailsModal(user.id)"
+          >
+          Details
+          </button>
 
             <!-- Delete Button -->
             <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">

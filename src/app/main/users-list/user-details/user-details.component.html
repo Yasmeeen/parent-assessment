@@ -1,0 +1,28 @@
+<div class="p-4">
+  <h5 class="pb-5" mat-dialog-title>Personal Information
+  </h5>
+
+  <div mat-dialog-content>
+    <div class="modal-body">
+      <div class="modal-body">
+        <div class="row" *ngIf="selectedUser && !isLoading">
+          <div class="col-md-4 text-center">
+            <img [src]="selectedUser.avatar" alt="User Avatar" class="img-fluid rounded-circle mb-4" />
+            <h5 class="mb-1">{{ selectedUser.first_name }} {{ selectedUser.last_name }}</h5>
+            <p class="text-muted">{{ selectedUser.email }}</p>
+          </div>
+          <div class="col-md-8">
+            <!-- <h4>Personal Information</h4> -->
+            <ul class="list-unstyled mt-4">
+              <li><strong class="text-primary">First Name:</strong> {{ selectedUser.first_name }}</li>
+              <li><strong class="text-primary">Last Name:</strong> {{ selectedUser.last_name }}</li>
+              <li><strong class="text-primary">Email:</strong> {{ selectedUser.email }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+

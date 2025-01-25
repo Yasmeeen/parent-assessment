@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { UserFormComponent } from './user-form/user-form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @Component({
   selector: 'app-users-list',
@@ -59,16 +60,27 @@ export class UsersListComponent {
     this.isLoading = true;
     this.usersService.deleteUser(userId).subscribe(
       () => {
-        console.log('User deleted:', userId);
-        // After deletion, reload users to refresh the list
+        this.toastr.success('User deleted', 'Success');
         this.loadUsers();
         this.isLoading = false;
       },
       (error) => {
-        console.error('Error deleting user', error);
+        this.toastr.error('Error deleting user', 'Error');
         this.isLoading = false;
       }
     );
+  }
+  openUserDetailsModal(userId: number){
+    const dialogRef = this.dialog.open(UserDetailsComponent, {
+      width: '500px', // You can adjust the width as needed
+      data: userId,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.loadUsers();
+      }
+    });
   }
 
   paginationUpdate(page: number) {

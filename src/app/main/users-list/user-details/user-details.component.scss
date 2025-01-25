@@ -1,0 +1,23 @@
+/* User Details Modal Custom Styles */
+#userDetailsModal .modal-body {
+  padding: 2rem;
+}
+
+#userDetailsModal .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+#userDetailsModal .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#userDetailsModal .list-unstyled li {
+  margin-bottom: 0.5rem;
+}
+
+#userDetailsModal .img-fluid {
+  max-width: 150px;
+  height: auto;
+}
