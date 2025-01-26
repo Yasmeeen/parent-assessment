@@ -51,6 +51,8 @@ For end-to-end (e2e) testing, run:
 ```bash
 ng e2e
 ```
+<img width="1438" alt="image" src="https://github.com/user-attachments/assets/e75da0be-a310-4ed5-b8dc-8a3a0b32e914" />
+
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
