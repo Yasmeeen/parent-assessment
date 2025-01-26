@@ -40,8 +40,6 @@ export class UserFormComponent implements OnInit {
   ngOnInit(): void {
     this.userId = this.data;
     if (this.userId) {
-      console.log("this.userId",this.userId);
-
       this.isEdit = true;
       this.getUserDetails();
     }
