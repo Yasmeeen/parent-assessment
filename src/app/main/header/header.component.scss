@@ -1,8 +1,10 @@
+@use 'variables/variables.scss' as *;
 .navbar{
   margin-bottom: 35px;
   margin-top: 20px;
   position: sticky;
   padding: 10px;
+  background-color: $white;
   top: 0;
   z-index: 9;
   height: 70px;

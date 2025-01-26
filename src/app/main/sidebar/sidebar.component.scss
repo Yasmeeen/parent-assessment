@@ -13,4 +13,11 @@
     background-color: #f8f9fa;
     color: #0056b3;
   }
+  .pointer{
+    cursor: pointer;
+  }
+  .active{
+    background-color: $primary;
+    color: $white;
+  }
 }
